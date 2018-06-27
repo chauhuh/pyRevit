@@ -90,9 +90,9 @@ for sym_id in fam_symbol.GetFamilySymbolIds():
 fam_doc = revit.doc.EditFamily(fam_symbol)
 fam_doc_path = fam_doc.PathName
 if not op.exists(fam_doc_path):
-    forms.alert('Can not file original family file at\n{}'
+    forms.alert('Can not find original family file at\n{}'
                 .format(fam_doc_path))
-    logger.debug('Can not file original family file at {}'
+    logger.debug('Can not find original family file at {}'
                  .format(fam_doc_path))
     script.exit()
 else:
